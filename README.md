@@ -8,15 +8,15 @@ Before you start, be sure to review the provided CSS for styling rules that are 
 
 ## Desktop layouts
 
-![Home - Desktop](./mockups/homepage-desktop.png)
+![Home - Desktop](exercise/mockups/homepage-desktop.png)
 
-![Contact Us - Desktop](./mockups/contact-us-desktop.png)
+![Contact Us - Desktop](exercise/mockups/contact-us-desktop.png)
 
 ## Mobile layouts
 
-![Home - Mobile](./mockups/homepage-mobile.png)
+![Home - Mobile](exercise/mockups/homepage-mobile.png)
 
-![Contact Us - Mobile](./mockups/contact-us-mobile.png)
+![Contact Us - Mobile](exercise/mockups/contact-us-mobile.png)
 
 ## Requirements
 
