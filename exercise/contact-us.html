@@ -5,34 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+    <header>
+
+        <img src="images\blue-pop.png"/>
+        <h1>Fred's Frozen Pops</h1>
+
+    </header>
+
+    <nav>
+
+        <ul>
+            <li> <a href="">HOME</a> </li>
+            <br> 
+            <li> <a href="">STORE</a></li>
+            <br>
+            <li> <a href="">CONTACT US</a></li>
+        </ul>
+
+    </nav>
+    <main>
     <form action="" method="post">
     
-    <!--Name/Required-->
-    <label for="name">Name:</label>
-    <input id="name" name="name" type="text" required/> 
+        <!--Name/Required-->
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" required/> 
+        
+        <!--Hear About Us / drop-down-->
+        <label for="heard-about">How did you hear of us?</label>
+        <select id="heard-about" name="heard-about" >
+            <option>Word of Mouth</option>
+            <option>Skywriting</option>
+            <option>tiny mouse that lives in sewer (Tim)</option>
+            <option>DarkWeb</option>
+            <option>Advertisement</option>
+            <option>Incepted into my dreams</option>
+        </select>
+
+        <!--favorite color / drop-down-->
+        <label for="favorite-color"> What color is your favorite frozen pop?</label>
+        <select id="favorite-color" name="favorite-color">
+            <option>Red</option>
+            <option>Orange</option>
+            <option>Blue</option>
+            <option>Green</option>
+            <option>Yellow</option>
+            <option>Violet</option>
+
+        </select>
+
+        <!--comments / paragraph textbox-->
+        <label for="comments">Please let us know any comments you have:</label>
+        <textarea id="comments" name="comments" rows="6" cols="60"></textarea>
+
+        <!--Submit button-->
+        <label for="submit">Submit:</label>
+        <input id="submit" name="submit" type="submit"/> 
     
-    <!--Hear About Us / drop-down-->
-    <label for="heard-about">How did you hear of us?</label>
-    <input id="heard-about" name="heard-about"/>
-
-    <!--favorite color / drop-down-->
-    <label for="favorite-color"> What color is your favorite frozen pop?</label>
-    <input id="favorite-color" name="favorite-color"/> 
-
-    <!--comments / paragraph textbox-->
-    <label for="comments">Please let us know any comments you have:</label>
-    <input id="comments" name="comments"/> 
-
-    <!--Submit button-->
-    <label for="submit">Submit:</label>
-    <input id="submit" name="submit" type="submit"/> 
-
-
-</form>
+    </form>
+    </main>
+    <footer>
+        <p>&copy 2022 All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
