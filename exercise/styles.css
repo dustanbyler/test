@@ -1,40 +1,60 @@
 
+*{
+    box-sizing: border-box;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #87CEEB;
 
 }
-main
+body
 {
     display:grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows:1fr 15fr 1fr;
     grid-template-areas:
-    "content content"
-    "promo1 promo2"
-    "footer footer";
-    column-gap: 50px;
-    row-gap: 50px;
+   "header"
+   "main"
+   "footer";
+    
+    row-gap: 10px;
+    height: 100vh;
+   
 }
-header
+#index-main
+{
+grid-area:main;
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows: 2fr 1fr;
+grid-template-areas: 
+    "facts facts"
+    "race store";
+    column-gap: 10px;
+    row-gap: 10px;
+;
+}
+#FunFacts{
+    grid-area: facts;
+
+}
+#PopRace{
+    grid-area: race;
+
+}
+#StoreLink
+{
+    grid-area: store;
+}
+body > header
 {
     grid-area: header;
+    
+    align-content:left ;
 
 }
-nav
-{
-    grid-area: nav;
 
-}
-#FunFacts
-{
-    grid-area: content;
-    justify-content:start ;
-}
-#PopRace
-{grid-area: promo1;}
-#StoreLink
-{grid-area: promo2;}
+
+
 footer
 {grid-area:footer;}
 
@@ -68,18 +88,19 @@ main img {
     width: 35%;
 }
 
-main li:before {
+section li:before {
     content: '🍡';
     margin-left: -31px;
     padding-right: 8px;
 }
 
- main, section, footer {
+ form, section, footer {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 20px;
 }
-
+main li
+{list-style:none;}
 .store-button { /* used for store link in "Get refreshed" section */
     width: 25%;
     padding: 10px;
@@ -90,3 +111,19 @@ main li:before {
     text-align: center;
     text-transform: uppercase;
 }
+/*form starts here */
+#form-main li
+{
+   text-align:left;
+  width:fit-content;
+  
+
+
+    
+}
+
+#submit{
+    background-color: #00afef;
+    border-radius: 5px;
+}
+

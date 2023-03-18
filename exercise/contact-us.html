@@ -13,27 +13,30 @@
 
         <img src="images\blue-pop.png"/>
         <h1>Fred's Frozen Pops</h1>
+        <nav>
+
+            <ul>
+                <li> <a href="">HOME</a> </li>
+                
+                <li> <a href="">STORE</a></li>
+                
+                <li> <a href="">CONTACT US</a></li>
+            </ul>
+    
+        </nav>
 
     </header>
 
-    <nav>
-
-        <ul>
-            <li> <a href="">HOME</a> </li>
-            <br> 
-            <li> <a href="">STORE</a></li>
-            <br>
-            <li> <a href="">CONTACT US</a></li>
-        </ul>
-
-    </nav>
-    <main>
-    <form action="" method="post">
     
+    <main id = "form-main">
+    <form action="" method="post">
+      <ol>
+        <li>
         <!--Name/Required-->
         <label for="name">Name:</label>
         <input id="name" name="name" type="text" required/> 
-        
+        </li>
+        <li>
         <!--Hear About Us / drop-down-->
         <label for="heard-about">How did you hear of us?</label>
         <select id="heard-about" name="heard-about" >
@@ -44,7 +47,8 @@
             <option>Advertisement</option>
             <option>Incepted into my dreams</option>
         </select>
-
+        </li>
+    <li>
         <!--favorite color / drop-down-->
         <label for="favorite-color"> What color is your favorite frozen pop?</label>
         <select id="favorite-color" name="favorite-color">
@@ -56,15 +60,15 @@
             <option>Violet</option>
 
         </select>
-
+    </li>
         <!--comments / paragraph textbox-->
-        <label for="comments">Please let us know any comments you have:</label>
+      <li>  <label for="comments">Please let us know any comments you have:</label>
         <textarea id="comments" name="comments" rows="6" cols="60"></textarea>
-
+        </li>
         <!--Submit button-->
-        <label for="submit">Submit:</label>
-        <input id="submit" name="submit" type="submit"/> 
-    
+       <li>
+        <input id="submit" name="submit" type="submit"/> </li>
+      </ol>
     </form>
     </main>
     <footer>
