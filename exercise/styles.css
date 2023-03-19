@@ -1,148 +1,24 @@
-
-
-body {
+body 
+{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #87CEEB;
-
-}
-body
-{
     display:grid;
-    grid-template-rows:1fr 3/5fr 1fr;
+    grid-template-rows:1fr 10fr 1fr;
     grid-template-areas:
-   "header"
-   "main"
-   "footer";
-    
+        "header"
+        "main"
+        "footer";
     row-gap: 10px;
-
-   
+    height:100vh;
 }
-#index-main
+li
 {
-grid-area:main;
-display:grid;
-grid-template-columns:1fr 1fr;
-
-grid-template-areas: 
-    "facts facts"
-    "race store";
-    column-gap: 10px;
-    row-gap: 10px;
-    
-;
+    list-style: none;
 }
-#FunFacts{
-    grid-area: facts;
-    display:grid;
-    grid-template-columns: 1fr 3fr;
-    
-    grid-template-areas: 
-        "img headline"
-        "img li"
-    ;
-  max-height:auto ;
-  
-}
-#FunFacts img{
-   display: flex;
-    grid-area: img;
-    
-}
-#FunFacts h2{
-    grid-area: headline;
-    margin-top: auto;
-    margin-bottom: 10px;
-    margin-left: 15px;
-    padding-left: 10px;
-}
-#FunFacts li{
-    grid-area: li;
-}
-#PopRace{
-    grid-area: race;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-bottom: 30px;
-    display:flex;
-    
-
-
-}
-#PopRace img{
-    order:-1;
-    height:100px;
-}
-#PopRace h2{
-    flex-direction: rows;
-    text-align: center;
-}
-
-
-#StoreLink
+a
 {
-    grid-area: store;
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    
+    text-decoration: none;
 }
-body > header
-{
-    grid-area: header;
-    
-   display: flex;
-   justify-content: space-between;
-    align-items: center;
-
-}
-
-
-header nav{
-    margin-left: auto;
-    flex-direction:columns;
-    
-}
-
-footer
-{grid-area:footer;}
-
-nav ul {
-    margin: 0;
-    padding: 20px 0 0 0;
-}
-
-nav ul li {
-    list-style:none;
-    width: 100%;
-    background-color: #00afef;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 50px;
-    text-emphasis: bold;
-
-    
-}
-
-header img {
-    flex: start;
-    height: 100px;
-    width: auto;
-}
-header h1 {
-    padding-left: 20px;
-    padding-top: 10px;
-    margin-right: auto;
-}
-
-main img {
-    
-    object-fit: cover;
-    margin-right: 20px;
-    height: 350px;
-    width: auto;
-}
-
 section li:before {
   
     content: '🍡';
@@ -155,8 +31,123 @@ section li:before {
     border-radius: 5px;
     padding: 20px;
 }
-#index-main li
-{list-style:none;}
+/*HEADER BEGINS HERE*/
+header
+{
+    grid-area: header;
+    display: flex;
+}
+header img 
+{
+    flex: start;
+    height: 100px;
+    width: auto;
+}
+header h1 
+{
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-right: auto;
+}
+nav ul 
+{
+    display: flex;
+}
+nav ul li
+{
+    background-color: #00afef;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-right: 25px;
+    font-weight: bold;
+}
+/*MAIN BEGINS HERE*/
+#index-main
+{
+    grid-area: main;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: 
+        "facts facts"
+        "race store";
+    column-gap: 10px;
+    row-gap: 50px;
+}
+main img
+{
+    object-fit: cover;
+    margin-right: 20px;
+    height: 475px;
+    width: auto;
+}
+#FunFacts
+{
+    grid-area: facts;
+    display:grid;
+    height: 100%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+        "img headline"
+        "img li";
+   
+}
+#FunFacts img
+{
+   display: flex;
+   grid-area: img; 
+}
+#FunFacts h2
+{
+    grid-area: headline;
+    margin-top: auto;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    padding-left: 10px;
+}
+#FunFacts li
+{
+    grid-area: li; 
+    padding-left: 1%;
+}
+#PopRace
+{
+    grid-area: race;
+    padding-bottom: 30px;
+    display:grid;
+    grid-template-areas: 
+    "img header"
+    "img content";
+    height: 67%;
+    
+}
+#PopRace h2
+{
+    grid-area: header;
+    text-align: center;
+}
+#PopRace img
+{
+    grid-area: img;
+    height: max-content;
+}
+#PopRace p
+{
+    grid-area: content;
+}
+#StoreLink
+{
+    grid-area: store;
+    text-align: center;
+    height: 70%;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .store-button { /* used for store link in "Get refreshed" section */
     width: 25%;
     padding: 10px;
@@ -169,15 +160,23 @@ section li:before {
     padding-right: 100px;
     padding-left: 100px;
 }
-/*form starts here */
+/*FOOTER BEGINS HERE*/
+footer
+{
+    grid-area: footer;
+    row-gap: 50px;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    
+}
+
+/*FORM STARTS HERE*/
 #form-main li
 {
-   display: block;
+    display: block;
     text-align:center;
-  width:fit-content;
-  
- 
-   
+    width:fit-content;  
 }
 
 #submit{
